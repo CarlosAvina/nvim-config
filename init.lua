@@ -422,7 +422,7 @@ require('lazy').setup({
     end,
   },
 
-  { -- LSP Configuration & Plugins
+  --[[ { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
@@ -578,7 +578,7 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        --[[ tsserver = {}, ]]
+        tsserver = {},
         html = {},
         htmx = {},
         --
@@ -632,7 +632,6 @@ require('lazy').setup({
           end,
         },
         ensure_installed = {
-          'tsserver',
           'html',
           'cssls',
           'tailwindcss',
@@ -645,7 +644,8 @@ require('lazy').setup({
         },
       }
     end,
-  },
+  }, 
+--]]
 
   { -- Autoformat
     'stevearc/conform.nvim',
