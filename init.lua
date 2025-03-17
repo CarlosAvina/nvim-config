@@ -986,3 +986,8 @@ end)
 vim.keymap.set('n', '<leader>n', function()
   harpoon:list():next()
 end)
+
+-- Clear marks
+vim.keymap.set('n', '<C-hd>', function() 
+  harpoon:list():clear()
+end)
